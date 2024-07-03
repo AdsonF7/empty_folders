@@ -1,3 +1,10 @@
+"""
+Module for manipulating the application's graphical interface
+
+Author: Adson Felipe
+Date: 2024-07-03
+"""
+
 from tkinter import Tk, Button, Label, Entry, StringVar, Text, filedialog, messagebox, END
 
 class GUI(Tk):
