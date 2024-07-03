@@ -17,8 +17,6 @@ class App:
     @init_folder.setter
     def init_folder(self, value):
         self._init_folder = pathlib.Path(value)
-        #if self._init_folder.is_dir():
-        #    self.find_empty_folders(self._init_folder)
         
     def find_empty_folders(self, folder=None):
         if folder == None:
