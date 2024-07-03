@@ -4,4 +4,3 @@ def __init__():
     app = App()
 
 __init__()
-#input()
