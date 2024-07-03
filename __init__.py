@@ -1,6 +1,7 @@
 from app import App
 
-def __init__():
+def main():
     app = App()
 
-__init__()
+if __name__ ==  "__main__":
+    main()
