@@ -5,10 +5,10 @@ from gui import GUI
 class App:
 
     def __init__(self):
-        self.gui = GUI(self)
-        self.init_folder = ""
-        self.empty_folders = []
-        self.gui.mainloop()
+        self._gui = GUI(self)
+        self._init_folder = ""
+        self._empty_folders = []
+        self._gui.mainloop()
 
     @property
     def init_folder(self):
@@ -20,12 +20,12 @@ class App:
         
     def find_empty_folders(self, folder=None):
         if folder == None:
-            folder = self.init_folder
-            self.empty_folders = []
+            folder = self._init_folder
+            self._empty_folders = []
         try: 
             if len(list(folder.iterdir())) == 0:
-                self.gui.insert_result(folder)
-                self.empty_folders.append(folder)
+                self._gui.insert_result(folder)
+                self._empty_folders.append(folder)
                 return None
             else:
                 for i in folder.iterdir():
