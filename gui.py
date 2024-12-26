@@ -9,9 +9,9 @@ from tkinter import Tk, Button, Label, Entry, StringVar, Text, filedialog, messa
 
 class GUI(Tk):
 
-    def __init__(self, root, *args, **kwargs):
+    def __init__(self, app, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.root = root
+        self._app = app
         self.str_folder = StringVar(self)
         lb_folder = Label(self, text="Folder")
         lb_folder.grid(column=0, row=0)
@@ -31,8 +31,8 @@ class GUI(Tk):
 
     def bt_find_click(self, event):
         self.clear_result()
-        self.root.init_folder = self.str_folder.get()
-        self.root.find_empty_folders()
+        self._app.init_folder = self.str_folder.get()
+        self._app.find_empty_folders()
         print(f"ok find in {self.str_folder.get()}")
 
     def bt_folder_click(self, event):
