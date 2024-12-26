@@ -43,7 +43,7 @@ class GUI(Tk):
     def bt_remove_click(self, event):
         answer = messagebox.askyesno("Proceed?", "Do you really want to delete the empty folders?")
         if answer:
-            self.root.remove_empty_folders()
+            self._app.remove_empty_folders()
 
     def insert_result(self, text):
         self.tx_result.insert(END, str(text) + "\n")
